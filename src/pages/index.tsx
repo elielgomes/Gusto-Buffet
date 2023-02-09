@@ -1,5 +1,14 @@
 import Head from 'next/head'
-import { Navbar, MainBanner, About, Partner, Reference } from '@/components'
+import {
+	Navbar,
+	MainBanner,
+	About,
+	Partner,
+	Reference,
+	Galery,
+	Slider,
+	Team,
+} from '@/components'
 
 export default function Home() {
 	return (
@@ -22,6 +31,12 @@ export default function Home() {
 			</section>
 			<section>
 				<Reference />
+			</section>
+			<section>
+				<Galery />
+			</section>
+			<section>
+				<Team/>
 			</section>
 		</>
 	)

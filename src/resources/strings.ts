@@ -48,7 +48,15 @@ const strings = new LocalizedStrings({
 					title: "16",
 					subTitle: "Chefes Qualificados",
 				}
-			]
+			],
+			galery: {
+				title: "Nossa Galeria",
+				subTitle: "Sinta um pouquinho do Gusto Buffet"
+			},
+			team: {
+				title: "Nosso time",
+				subTitle: "Os melhores do ramo"
+			}
 		},
 		actions: {
 			send: "Enviar",

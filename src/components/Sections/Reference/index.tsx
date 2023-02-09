@@ -19,7 +19,6 @@ const rubik = Rubik({
 	style: "normal"
 })
 
-
 export const Reference: React.FC = () => {
 	return (
 		<Box
@@ -77,8 +76,7 @@ export const Reference: React.FC = () => {
 								</Heading>
 							</GridItem>
 						</>
-					))
-					}
+					))}
 				</Grid>
 			</ContainerSection>
 		</Box>
