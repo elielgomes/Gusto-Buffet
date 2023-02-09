@@ -1,5 +1,4 @@
 import React from "react"
-
 import strings from "@/resources/strings";
 
 interface INavLinks {

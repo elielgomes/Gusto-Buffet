@@ -13,8 +13,8 @@ import Image from "next/image";
 import { Navlinks } from "./Navlinks";
 import Link from "next/link";
 
-import { Rubik } from "@next/font/google";
 import { SocialMediaButtons } from "../SocialMediaButtons";
+import { Rubik } from "@next/font/google";
 
 const rubik = Rubik({
 	weight: '400',
@@ -29,7 +29,6 @@ export const Navbar: React.FC = () => {
 			background="primary.500"
 			height="69px"
 			width="100%"
-			// position="fixed"
 		>
 			<Container
 				as="nav"

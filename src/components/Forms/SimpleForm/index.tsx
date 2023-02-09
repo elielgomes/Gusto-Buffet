@@ -1,12 +1,20 @@
 import React from "react";
-import { Flex, Input, FormLabel, FormControl } from "@chakra-ui/react";
-import { IMaskInput } from "react-imask";
-
+import { Flex, Button, FormControl, Heading } from "@chakra-ui/react";
+import { InputSimpleHover } from "@/components/Inputs/InputSimpleHover";
 import strings from "@/resources/strings";
+import { Rubik } from "@next/font/google";
 
 const formStrings = strings.components.form;
 
+const rubik = Rubik({
+	subsets: ["latin"],
+	weight: "400",
+	style: "normal"
+})
+
+
 export const SimpleForm: React.FC = () => {
+
 	return (
 		<FormControl
 			display="flex"
@@ -14,42 +22,38 @@ export const SimpleForm: React.FC = () => {
 			gap="10px"
 			bgColor="primary.500"
 			width="300px"
-			height="400px"
+			height="430px"
 			padding="20px"
+			borderRadius="8px"
 		>
-			<FormLabel color="secondary.400">{formStrings.name}</FormLabel>
-			<Input
-				variant="filled"
-				outline="transparent"
-				borderColor="transparent"
-				_focus={{
-					outline: "tertiary.50",
-					borderColor: "tertiary.50",
-					color: "secondary.50"
+			<Heading
+				as="h3"
+				color="tertiary.50"
+				fontWeight="light"
+				fontSize="20px"
+				textAlign="center"
+				pb="10px"
+				style={{
+					fontFamily: rubik.style.fontFamily
 				}}
-			/>
-			<FormLabel color="secondary.400">{formStrings.phone}</FormLabel>
-			<Input
-				variant="filled"
-				outline="transparent"
-				borderColor="transparent"
-				_focus={{
-					outline: "tertiary.50",
-					borderColor: "tertiary.50",
-					color: "secondary.50"
-				}}
-			/>
-			<FormLabel color="secondary.400">{formStrings.email}</FormLabel>
-			<Input
-				variant="filled"
-				outline="transparent"
-				borderColor="transparent"
-				_focus={{
-					outline: "tertiary.50",
-					borderColor: "tertiary.50",
-					color: "secondary.50"
-				}}
-			/>
+			>
+				{strings.components.mainBanner.formTitle}
+			</Heading>
+			<InputSimpleHover label={formStrings.name} />
+			<InputSimpleHover label={formStrings.phone} />
+			<InputSimpleHover label={formStrings.email} />
+			<Flex
+				width="100%"
+				justifyContent="center"
+				pt="15px"
+			>
+				<Button
+					variant="solid"
+					width="100%"
+				>
+					{strings.actions.send}
+				</Button>
+			</Flex>
 		</FormControl>
 	)
 }

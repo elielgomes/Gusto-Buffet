@@ -8,4 +8,26 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+	}
+	
+	html, body {
+		width: 100vw;
+		overflow-x: hidden;
+}
+
+html{
+	scroll-behavior: "instant";           
+}
+body{
+	background-color: #000;
+}
+body::-webkit-scrollbar {
+	width: 5px;
+}
+body::-webkit-scrollbar-track {
+	background: #333333;
+}
+body::-webkit-scrollbar-thumb{
+	background-color: #f4b350;
+	border-radius: 10px;
 }
