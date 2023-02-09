@@ -21,7 +21,7 @@ export const SimpleForm: React.FC = () => {
 			flexDirection="column"
 			gap="10px"
 			bgColor="primary.500"
-			width="300px"
+			width={{base: "280px",lg: "280px", xl:"300px"}}
 			height="430px"
 			padding="20px"
 			borderRadius="8px"
@@ -30,7 +30,7 @@ export const SimpleForm: React.FC = () => {
 				as="h3"
 				color="tertiary.50"
 				fontWeight="light"
-				fontSize="20px"
+				fontSize={{base:"16px",lg: "16px", xl:"20px"}}
 				textAlign="center"
 				pb="10px"
 				style={{

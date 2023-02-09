@@ -23,20 +23,17 @@ const rubik = Rubik({
 
 export const About: React.FC = () => {
 	return (
-		<ContainerSection
-			containerProps={{
-				paddingY: "100px",
-			}}
-		>
+		<ContainerSection>
 			<Flex
 				w="100%"
+				py={{ sm: "30px", lg: "70px", xl: "100px" }}
 				justifyContent={{ base: "center", sm: "center", lg: "space-around" }}
 				flexDirection={{ base: "row", sm: "column", lg: "row" }}
 				alignItems={{ base: "center", sm: "center", lg: "flex-start" }}
 				rowGap={{ sm: "40px", lg: "0px" }}
 			>
 				<Flex
-					width={{ sm: "70%", lg: "40%" }}
+					width={{ sm: "100%", lg: "40%" }}
 					alignItems="center"
 					columnGap="5px"
 				>
@@ -60,7 +57,7 @@ export const About: React.FC = () => {
 				>
 					<Heading
 						as="h3"
-						fontSize="70px"
+						fontSize={{sm:"45px",md:"50px",lg: "70px"}}
 						fontWeight="light"
 						textAlign={{ base: "center", sm: "center", lg: "start" }}
 						style={{

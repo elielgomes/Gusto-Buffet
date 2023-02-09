@@ -6,3 +6,5 @@ export { InputSimpleHover } from "./Inputs/InputSimpleHover";
 export { ContainerSection } from "./ContainerSection";
 export { About } from "./Sections/About";
 export { Partner } from "./Sections/Partner";
+export { Reference } from "./Sections/Reference";
+

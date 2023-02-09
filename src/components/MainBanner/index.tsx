@@ -32,46 +32,52 @@ export const MainBanner: React.FC = () => {
 		>
 			<ContainerSection
 				containerProps={{
-					display: "flex",
 					height: "100%",
-					justifyContent: "space-around",
-					alignItems: "center",	
 				}}
 			>
 				<Flex
-					flexDirection="column"
-					justifyContent="center"
+					height="100%"
+					width="100%"
+					justifyContent="space-around"
 					alignItems="center"
+					flexDirection={{ base: "column", lg: "column", xl: "row" }}
 				>
-					<Heading
-						as="h1"
-						fontSize="90px"
-						color="secondary.50"
-						fontWeight="light"
-						p="40px"
-						borderY="1px solid"
-						style={{
-							fontFamily: italianno.style.fontFamily
-						}}
+					<Flex
+						flexDirection="column"
+						justifyContent="center"
+						alignItems="center"
 					>
-						{componentStrings.title}
-					</Heading>
-					<Heading
-						as="h2"
-						fontSize="20px"
-						pt="40px"
-						color="secondary.100"
-						fontWeight="light"
-						letterSpacing="1px"
-						fontFamily="Roboto"
-						style={{
-							fontFamily: rubik.style.fontFamily
-						}}
-					>
-						{componentStrings.subTitle}
-					</Heading>
+						<Heading
+							as="h1"
+							fontSize={{ base: "30px", sm: "40px", md: "60px", lg: "90px", xl: "70px", "2xl": "90px" }}
+							color="secondary.50"
+							fontWeight="light"
+							py={{ base: "10px", sm: "20px", md: "30px", lg: "40px" }}
+							px={{ base: "5px", lg: "40px" }}
+							borderY="1px solid"
+							style={{
+								fontFamily: italianno.style.fontFamily
+							}}
+						>
+							{componentStrings.title}
+						</Heading>
+						<Heading
+							as="h2"
+							fontSize={{ base: "16px", md: "18px", lg: "20px" }}
+							pt="40px"
+							color="secondary.100"
+							fontWeight="light"
+							letterSpacing="1px"
+							fontFamily="Roboto"
+							style={{
+								fontFamily: rubik.style.fontFamily
+							}}
+						>
+							{componentStrings.subTitle}
+						</Heading>
+					</Flex>
+					<SimpleForm />
 				</Flex>
-				<SimpleForm />
 			</ContainerSection>
 		</Box>
 	)
