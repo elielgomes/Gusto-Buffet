@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import Head from 'next/head'
 import {
 	Navbar,
@@ -11,8 +12,28 @@ import {
 	Contact,
 	Location
 } from '@/components'
+import AOS from 'aos';
 
 export default function Home() {
+
+	const mainRef = useRef<HTMLElement>(null);
+	const aboutRef = useRef<HTMLElement>(null);
+	const galeryRef = useRef<HTMLElement>(null);
+	const teamRef = useRef<HTMLElement>(null);
+	const contactRef = useRef<HTMLElement>(null);
+
+	const refSection = {
+		mainRef,
+		aboutRef,
+		galeryRef,
+		teamRef,
+		contactRef
+	}
+
+	React.useEffect(() => {
+		AOS.init()
+	}, [])
+
 	return (
 		<>
 			<Head>
@@ -21,26 +42,26 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="assets/gusto-icon.png" />
 			</Head>
-			<Navbar />
-			<main>
+			<Navbar navRefs={refSection}/>
+			<main ref={mainRef}>
 				<MainBanner />
 			</main>
 			<section>
 				<Partner />
 			</section>
-			<section>
+			<section ref={aboutRef}>
 				<About />
 			</section>
 			<section>
 				<Reference />
 			</section>
-			<section>
+			<section ref={galeryRef}>
 				<Galery />
 			</section>
-			<section>
+			<section ref={teamRef}>
 				<Team />
 			</section>
-			<section>
+			<section ref={contactRef}>
 				<Contact />
 			</section>
 			<section>

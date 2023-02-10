@@ -6,6 +6,8 @@ import strings from "@/resources/strings";
 
 import { Italianno, Rubik } from "@next/font/google";
 
+import 'aos/dist/aos.css';
+
 const italianno = Italianno({
 	subsets: ["latin"],
 	weight: "400",
@@ -21,6 +23,7 @@ const rubik = Rubik({
 const componentStrings = strings.components.mainBanner;
 
 export const MainBanner: React.FC = () => {
+
 	return (
 		<Box
 			width="100vw"
@@ -46,13 +49,14 @@ export const MainBanner: React.FC = () => {
 						flexDirection="column"
 						justifyContent="center"
 						alignItems="center"
+						pt={{ md: "70px", lg: "90px" }}
 					>
 						<Heading
 							as="h1"
 							fontSize={{ base: "30px", sm: "40px", md: "60px", lg: "90px", xl: "70px", "2xl": "90px" }}
 							color="secondary.50"
 							fontWeight="light"
-							py={{ base: "10px", sm: "20px", md: "30px", lg: "40px" }}
+							py={{ base: "10px", sm: "20px", md: "30px", lg: "30px" }}
 							px={{ base: "5px", lg: "40px" }}
 							borderY="1px solid"
 							style={{

@@ -12,15 +12,15 @@ export const SocialMediaButtons: React.FC<IProps> = ({ flexProps }) => {
 	const socialMediaButtons = [
 		{
 			icon: FaFacebook,
-			href: "#"
+			href: "https://www.facebook.com/"
 		},
 		{
 			icon: FaInstagram,
-			href: "#"
+			href: "https://www.instagram.com/"
 		},
 		{
 			icon: FaLinkedinIn,
-			href: "#"
+			href: "https://www.linkedin.com/"
 		}
 	];
 
@@ -32,7 +32,7 @@ export const SocialMediaButtons: React.FC<IProps> = ({ flexProps }) => {
 			{...flexProps}
 		>
 			{socialMediaButtons.map((item) => (
-				<Link key={item.href} href="#">
+				<Link key={item.href} href={item.href}>
 					<Box
 						as={item.icon}
 						color="primary.400"

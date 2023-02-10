@@ -1,15 +1,16 @@
 import React from "react";
 import { Text, Box, Link } from "@chakra-ui/react";
-import { Navlinks } from "@/components/Navbar/Navlinks";
-
 import { Rubik } from "@next/font/google";
-
 import { SocialMediaButtons } from "@/components";
-
+import { INavLinks, IRefSections } from "@/components/Navbar";
+import strings from "@/resources/strings";
 
 interface IProps {
 	onClose: () => void;
+	navRefs: IRefSections;
 }
+
+const drawerStrings = strings.components.navbar
 
 const rubik = Rubik({
 	weight: '400',
@@ -17,9 +18,37 @@ const rubik = Rubik({
 	style: "normal",
 })
 
-export const DrawerLinks: React.FC<IProps> = ({ onClose }) => {
+export const DrawerLinks: React.FC<IProps> = ({ onClose, navRefs }) => {
 
 	const fontSizeBreakPoint = { base: "sm", lg: "md" };
+
+	const onGoSection = (section: React.RefObject<HTMLElement>) => {
+		section.current?.scrollIntoView();
+	}
+
+	const DrawerLinks: INavLinks[] = [
+		{
+			text: drawerStrings.home,
+			scroll: navRefs.mainRef
+		},
+		{
+			text: drawerStrings.about,
+			scroll: navRefs.aboutRef
+		},
+		{
+			text: drawerStrings.galery,
+			scroll: navRefs.galeryRef
+		},
+		{
+			text: drawerStrings.team,
+			scroll: navRefs.teamRef
+		},
+		{
+			text: drawerStrings.contact,
+			scroll: navRefs.contactRef
+		}
+	]
+
 
 	return (
 		<>
@@ -29,11 +58,10 @@ export const DrawerLinks: React.FC<IProps> = ({ onClose }) => {
 				flexDirection="column"
 				alignItems="center"
 			>
-				{Navlinks.map((item) => (
+				{DrawerLinks.map((item) => (
 					<Link
 						key={item.text}
-						href={item.path}
-						onClick={onClose}
+						onClick={() => onGoSection(item.scroll)}
 						display="flex"
 						border="1px solid transparent"
 						_hover={{

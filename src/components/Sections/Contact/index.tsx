@@ -14,7 +14,8 @@ export const Contact: React.FC = () => {
 		<Box
 			width="100vw"
 			height="auto"
-			py="50px"
+			pt="125px"
+			pb="50px"
 			backgroundImage="url('assets/banner-2.jpg')"
 			backgroundSize="cover"
 			backgroundRepeat="no-repeat"

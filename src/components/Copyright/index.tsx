@@ -16,7 +16,7 @@ export const Copyright: React.FC = () => {
 				<Heading
 					as="p"
 					color="primary.400"
-					fontSize={{ sm: "12px", md: "14px", lg: "16px"}}
+					fontSize={{ sm: "12px", md: "14px", lg: "16px" }}
 					textAlign="center"
 					py="20px"
 					border="1px solid transparent"

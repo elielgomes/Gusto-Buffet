@@ -23,24 +23,22 @@ export const DoubtsAccordion: React.FC = () => {
 		>
 			<Accordion allowToggle>
 				{componentStrings.doubts.map((item) => (
-					<>
-						<AccordionItem key={item.title}>
-							<Heading as="h2" color="secondary.300">
-								<AccordionButton padding="20px">
-									<Box as="span" flex='1' textAlign='left'>
-										{item.title}
-									</Box>
-									<AccordionIcon />
-								</AccordionButton>
-							</Heading>
-							<AccordionPanel
-								pb={4}
-								color="secondary.50"
-							>
-								{item.description}
-							</AccordionPanel>
-						</AccordionItem>
-					</>
+					<AccordionItem key={item.title}>
+						<Heading as="h2" color="secondary.300">
+							<AccordionButton padding="20px">
+								<Box as="span" flex='1' textAlign='left'>
+									{item.title}
+								</Box>
+								<AccordionIcon />
+							</AccordionButton>
+						</Heading>
+						<AccordionPanel
+							pb={4}
+							color="secondary.50"
+						>
+							{item.description}
+						</AccordionPanel>
+					</AccordionItem>
 				))}
 			</Accordion>
 		</Box>

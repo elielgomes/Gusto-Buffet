@@ -3,6 +3,7 @@ import { Flex, Box, Heading, Button } from "@chakra-ui/react";
 import { ContainerSection } from "@/components/ContainerSection";
 import strings from "@/resources/strings";
 import { Italianno, Rubik } from "@next/font/google";
+import 'aos/dist/aos.css';
 
 const sectionStrings = strings.sections.partner;
 
@@ -31,7 +32,11 @@ export const Partner: React.FC = () => {
 					paddingX: "20px"
 				}}
 			>
-				<Flex
+				<Box
+					as="div"
+					display="flex"
+					data-aos="fade-left"
+					data-aos-duration="2000"
 					w="100%"
 					height="100%"
 					justifyContent="space-around"
@@ -75,7 +80,7 @@ export const Partner: React.FC = () => {
 							{strings.actions.info}
 						</Button>
 					</Box>
-				</Flex>
+				</Box>
 			</ContainerSection>
 		</Box>
 	)

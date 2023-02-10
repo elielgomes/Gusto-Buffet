@@ -4,6 +4,7 @@ import { Box, Grid, GridItem, Heading } from "@chakra-ui/react";
 import { ContainerSection } from "@/components/ContainerSection";
 import strings from "@/resources/strings";
 import { Italianno, Rubik } from "@next/font/google";
+import 'aos/dist/aos.css';
 
 const sectionStrings = strings.sections.reference;
 
@@ -46,9 +47,13 @@ export const Reference: React.FC = () => {
 					height="100%"
 				>
 					{sectionStrings.map((item, index) => (
-						<>
+						<Box
+							as="div"
+							key={index}
+							data-aos="fade-left"
+							data-aos-duration="2000"
+						>
 							<GridItem
-								key={index}
 								display="flex"
 								alignItems="center"
 								flexDirection="column"
@@ -75,7 +80,7 @@ export const Reference: React.FC = () => {
 									{item.subTitle}
 								</Heading>
 							</GridItem>
-						</>
+						</Box>
 					))}
 				</Grid>
 			</ContainerSection>

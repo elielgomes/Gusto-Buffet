@@ -10,12 +10,29 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi"
 import Image from "next/image";
-
-import { Navlinks } from "./Navlinks";
-
 import { SocialMediaButtons } from "../SocialMediaButtons";
 import { DrawerContainer } from "@/components";
 import { Rubik } from "@next/font/google";
+import strings from "@/resources/strings";
+
+export interface INavLinks {
+	text: string;
+	scroll: React.RefObject<HTMLElement>;
+}
+
+export interface IRefSections {
+	mainRef: React.RefObject<HTMLElement>;
+	aboutRef: React.RefObject<HTMLElement>;
+	galeryRef: React.RefObject<HTMLElement>;
+	teamRef: React.RefObject<HTMLElement>;
+	contactRef: React.RefObject<HTMLElement>;
+}
+
+export interface IProps {
+	navRefs: IRefSections;
+}
+
+const navStrings = strings.components.navbar
 
 const rubik = Rubik({
 	weight: '400',
@@ -23,9 +40,37 @@ const rubik = Rubik({
 	style: "normal",
 })
 
-export const Navbar: React.FC = () => {
+
+export const Navbar: React.FC<IProps> = ({ navRefs }) => {
 
 	const [isOpen, setIsOpen] = useState(false);
+
+	const onGoSection = (section: React.RefObject<HTMLElement>) => {
+		section.current?.scrollIntoView();
+	}
+
+	const Navlinks: INavLinks[] = [
+		{
+			text: navStrings.home,
+			scroll: navRefs.mainRef
+		},
+		{
+			text: navStrings.about,
+			scroll: navRefs.aboutRef
+		},
+		{
+			text: navStrings.galery,
+			scroll: navRefs.galeryRef
+		},
+		{
+			text: navStrings.team,
+			scroll: navRefs.teamRef
+		},
+		{
+			text: navStrings.contact,
+			scroll: navRefs.contactRef
+		}
+	]
 
 	return (
 		<Box
@@ -60,10 +105,10 @@ export const Navbar: React.FC = () => {
 						gap="30px"
 						paddingRight="30px"
 					>
-						{Navlinks.map((item) => (
+						{Navlinks.map((item, index) => (
 							<Link
-								key={item.text}
-								href={item.path}
+								key={`${index}${item.text}`}
+								onClick={() => onGoSection(item.scroll)}
 								textDecoration="none"
 								color="inherit"
 								textTransform="uppercase"
@@ -93,18 +138,19 @@ export const Navbar: React.FC = () => {
 					<SocialMediaButtons />
 				</Box>
 				<Button
+					display={{ base: "initial", lg: "none" }}
 					variant="default"
 					onClick={() => setIsOpen(true)}
 				>
 					<Box
 						as={GiHamburgerMenu}
-						display={{ base: "initial", lg: "none" }}
 						color="tertiary.50"
 						size="40px"
 					/>
 				</Button>
 			</Container>
 			<DrawerContainer
+				navRefs={navRefs}
 				isOpen={isOpen}
 				onClose={() => setIsOpen(false)}
 			/>

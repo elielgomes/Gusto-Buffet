@@ -7,14 +7,16 @@ import {
 	DrawerContent,
 } from "@chakra-ui/react";
 import { DrawerLinks } from "./DrawerLinks";
+import { IRefSections } from "../Navbar";
 
 interface IProps {
 	isOpen: boolean;
 	onClose: () => void;
+	navRefs: IRefSections;
 }
 
-export const DrawerContainer: React.FC<IProps> = (props) => {
-	const { isOpen, onClose } = props;
+export const DrawerContainer: React.FC<IProps> = ({ isOpen, onClose, navRefs }) => {
+
 	return (
 		<Drawer
 			placement="right"
@@ -33,7 +35,7 @@ export const DrawerContainer: React.FC<IProps> = (props) => {
 					}}
 				/>
 				<DrawerBody pt={20} textAlign="center">
-					<DrawerLinks onClose={onClose} />
+					<DrawerLinks onClose={onClose} navRefs={navRefs} />
 				</DrawerBody>
 			</DrawerContent>
 		</Drawer>

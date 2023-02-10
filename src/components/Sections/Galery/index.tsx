@@ -1,11 +1,11 @@
 import React from "react";
 import { ContainerSection } from "@/components/ContainerSection";
-import { Box, Flex, Grid, GridItem, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import strings from "@/resources/strings";
 import { Italianno, Rubik } from "@next/font/google";
+import 'aos/dist/aos.css';
 
 const sectionStrings = strings.sections.galery;
-
 const italianno = Italianno({
 	subsets: ["latin"],
 	weight: "400",
@@ -55,7 +55,11 @@ const imagesGalery = [
 
 export const Galery: React.FC = () => {
 	return (
-		<Box width="100vw" bgColor="secondary.50">
+		<Box
+			width="100vw"
+			bgColor="secondary.50"
+			pt="50px"
+		>
 			<ContainerSection>
 				<Flex
 					width="100%"
@@ -65,18 +69,24 @@ export const Galery: React.FC = () => {
 					justifyContent="center"
 					alignItems="center"
 				>
-					<Heading
-						as="h2"
-						fontSize="70px"
-						fontWeight="light"
-						borderBottom="3px solid"
-						borderColor="tertiary.50"
-						style={{
-							fontFamily: italianno.style.fontFamily
-						}}
+					<Box
+						as="div"
+						data-aos="fade-down-right"
+						data-aos-duration="2000"
 					>
-						{sectionStrings.title}
-					</Heading>
+						<Heading
+							as="h2"
+							fontSize="70px"
+							fontWeight="light"
+							borderBottom="3px solid"
+							borderColor="tertiary.50"
+							style={{
+								fontFamily: italianno.style.fontFamily
+							}}
+						>
+							{sectionStrings.title}
+						</Heading>
+					</Box>
 					<Heading
 						as="h3"
 						pt="20px"
@@ -95,17 +105,18 @@ export const Galery: React.FC = () => {
 				width="100vw"
 				flexWrap="wrap"
 			>
-				{imagesGalery.map((item) => (
-					<>
-						<Box w={{ base: "50%", lg: "25%" }}>
-							<Image
-								alt={item.alt}
-								src={item.src}
-								width="100%"
-								height="auto"
-							/>
-						</Box>
-					</>
+				{imagesGalery.map((item, index) => (
+					<Box
+						key={index}
+						w={{ base: "50%", lg: "25%" }}
+					>
+						<Image
+							alt={item.alt}
+							src={item.src}
+							width="100%"
+							height="auto"
+						/>
+					</Box>
 				))}
 			</Flex>
 		</Box>
