@@ -7,7 +7,7 @@ const strings = new LocalizedStrings({
 				home: "Home",
 				about: "Sobre",
 				galery: "Galeria",
-				news: "Noticias",
+				team: "Equipe",
 				contact: "Contato"
 			},
 			form: {
@@ -56,6 +56,43 @@ const strings = new LocalizedStrings({
 			team: {
 				title: "Nosso time",
 				subTitle: "Os melhores do ramo"
+			},
+			contact: {
+				title: "Contato",
+				frequentlyDoubts: "Dúvidas?",
+				doubts: [
+					{
+						title: "Quem somos?",
+						description: "Gusto é um Buffet de comidas italianas de alta classe e sofisticação fundado na Italia em 1995",
+					},
+					{
+						title: "Como contratar?",
+						description: "Para contratar o Buffet Gusto basta preencher o formulário com seus dados que entraremos em contato para fazer uma avaliação e orçamento",
+					},
+					{
+						title: "Fazem festas?",
+						description: "Sim, o Gusto realiza festas comemorativas e empresarias, atendendo seus clientes de forma única e exclusiva",
+					},
+					{
+						title: "É seguro?",
+						description: "Temos mais de 6000 clientes satisfeitos com nossos serviços, o Gusto preza pela qualidade de seus produtos e atendimento",
+					}
+				]
+			},
+			footer: {
+				address: {
+					title: "Endereço",
+					value: "Rua Maurílio Biagi, 800 - Ribeirão Preto - SP"
+				},
+				phone: {
+					title: "Telefone",
+					value: "(16) 997070-7070"
+				},
+				email: {
+					title: "E-mail",
+					value: "contato@gusto.com"
+				},
+        copyright: "©2023 - Todos os direitos reservados - Desenvolvido por Eliel Gomes"
 			}
 		},
 		actions: {

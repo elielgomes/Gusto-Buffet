@@ -10,7 +10,12 @@ export const InputSimpleHover: React.FC<IInput> = ({ label }) => {
 	return (
 		<Box>
 			{label && (
-				<FormLabel color="secondary.400">{label}</FormLabel>
+				<FormLabel 
+				color="secondary.400"
+				textAlign={{ base: "center", sm: "center", lg: "start" }}
+				>
+					{label}
+					</FormLabel>
 			)
 			}
 			<Input

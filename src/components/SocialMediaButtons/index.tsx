@@ -1,8 +1,13 @@
 import React from "react";
-import { Flex, Link, Box } from "@chakra-ui/react";
+import { Flex, Link, Box, FlexProps } from "@chakra-ui/react";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 
-export const SocialMediaButtons: React.FC = () => {
+
+interface IProps {
+	flexProps?: FlexProps;
+}
+
+export const SocialMediaButtons: React.FC<IProps> = ({ flexProps }) => {
 
 	const socialMediaButtons = [
 		{
@@ -24,6 +29,7 @@ export const SocialMediaButtons: React.FC = () => {
 			gap="20px"
 			alignItems="center"
 			height="100%"
+			{...flexProps}
 		>
 			{socialMediaButtons.map((item) => (
 				<Link key={item.href} href="#">

@@ -6,8 +6,10 @@ import {
 	Partner,
 	Reference,
 	Galery,
-	Slider,
 	Team,
+	Footer,
+	Contact,
+	Location
 } from '@/components'
 
 export default function Home() {
@@ -36,8 +38,17 @@ export default function Home() {
 				<Galery />
 			</section>
 			<section>
-				<Team/>
+				<Team />
 			</section>
+			<section>
+				<Contact />
+			</section>
+			<section>
+				<Location />
+			</section>
+			<footer>
+				<Footer />
+			</footer>
 		</>
 	)
 }

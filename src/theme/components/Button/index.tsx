@@ -40,6 +40,11 @@ export const Button: ComponentStyleConfig = {
 				bgColor: "tertiary.50",
 				textColor: "secondary.50"
 			}
+		},
+		default: {
+			bgColor: "transparent",
+			outline: "none",
+			border: "none",
 		}
 	}
 };

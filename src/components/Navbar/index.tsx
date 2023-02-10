@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Box,
 	Flex,
 	UnorderedList,
 	Container,
 	ListItem,
-	Link as ChakraLink,
+	Link,
+	Button
 } from "@chakra-ui/react";
-
+import { GiHamburgerMenu } from "react-icons/gi"
 import Image from "next/image";
 
 import { Navlinks } from "./Navlinks";
-import Link from "next/link";
 
 import { SocialMediaButtons } from "../SocialMediaButtons";
+import { DrawerContainer } from "@/components";
 import { Rubik } from "@next/font/google";
 
 const rubik = Rubik({
@@ -23,19 +24,25 @@ const rubik = Rubik({
 })
 
 export const Navbar: React.FC = () => {
+
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<Box
 			as="header"
 			background="primary.500"
 			height="69px"
 			width="100%"
+			position="fixed"
+			zIndex={98}
 		>
 			<Container
 				as="nav"
 				maxWidth="1500px"
 				height="100%"
 				display="flex"
-				justifyContent="space-around"
+				justifyContent={{ base: "space-between", lg: "space-around" }}
+				alignItems={{ base: "center", lg: "normal" }}
 			>
 				<Flex height="100%" alignItems="center">
 					<Image
@@ -45,7 +52,7 @@ export const Navbar: React.FC = () => {
 						alt="gusto-brand"
 					/>
 				</Flex>
-				<Flex>
+				<Box display={{ base: "flex", sm: "none", lg: "flex" }}>
 					<UnorderedList
 						styleType="none"
 						display="flex"
@@ -54,9 +61,8 @@ export const Navbar: React.FC = () => {
 						paddingRight="30px"
 					>
 						{Navlinks.map((item) => (
-							<ChakraLink
+							<Link
 								key={item.text}
-								as={Link}
 								href={item.path}
 								textDecoration="none"
 								color="inherit"
@@ -81,13 +87,27 @@ export const Navbar: React.FC = () => {
 								>
 									{item.text}
 								</ListItem>
-							</ChakraLink>
-						))
-						}
+							</Link>
+						))}
 					</UnorderedList>
 					<SocialMediaButtons />
-				</Flex>
+				</Box>
+				<Button
+					variant="default"
+					onClick={() => setIsOpen(true)}
+				>
+					<Box
+						as={GiHamburgerMenu}
+						display={{ base: "initial", lg: "none" }}
+						color="tertiary.50"
+						size="40px"
+					/>
+				</Button>
 			</Container>
+			<DrawerContainer
+				isOpen={isOpen}
+				onClose={() => setIsOpen(false)}
+			/>
 		</Box>
 	)
 }
