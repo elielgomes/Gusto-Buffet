@@ -6,13 +6,14 @@ import {
 	About,
 	Partner,
 	Reference,
-	Galery,
+	Gallery,
 	Team,
 	Footer,
 	Contact,
-	Location
+	Location,
 } from '@/components'
 import AOS from 'aos';
+
 
 export default function Home() {
 
@@ -42,7 +43,7 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="assets/gusto-icon.png" />
 			</Head>
-			<Navbar navRefs={refSection}/>
+			<Navbar navRefs={refSection} />
 			<main ref={mainRef}>
 				<MainBanner />
 			</main>
@@ -56,7 +57,7 @@ export default function Home() {
 				<Reference />
 			</section>
 			<section ref={galeryRef}>
-				<Galery />
+				<Gallery />
 			</section>
 			<section ref={teamRef}>
 				<Team />
