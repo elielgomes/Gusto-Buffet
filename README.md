@@ -1,38 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gusto Buffet
 
-## Getting Started
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/108281436/218237907-fb908230-d54d-4ff5-85d6-dc54c988d357.png'/>
+<p/>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+# 🛡️ Badges
+![Open Source](https://img.shields.io/badge/OpenSource-%E2%9D%A4-green)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# 🔍 Indice
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* [Badges](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#%EF%B8%8F-badges)
+* [Índice](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#-indice)
+* [Descrição do Projeto](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#%EF%B8%8F-descri%C3%A7%C3%A3o-do-projeto)
+* [Status do Projeto](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#-status-do-projeto)
+* [Funcionalidades e Demonstração da Aplicação](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#%EF%B8%8F-funcionalidades-e-demonstra%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o)
+* [Acesso ao Projeto](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#-acesso-ao-projeto)
+* [Tecnologias utilizadas](https://github.com/elielgomes/Devflix-Mobx/blob/master/README.md#-tecnologias-utilizadas)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# ✏️ Descrição do Projeto
 
-## Learn More
+- O projeto consiste em uma página de um Buffet fictício de comida italiana chamado Gusto, onde o cliente pode contratar o Buffet para realizar confraternizações e festas comemorativas, o projeto foi desenvolvido para se adequar aos requisítos solicitados e para ter um layout fluído e agradável.
 
-To learn more about Next.js, take a look at the following resources:
+-Principais objetivos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Criar um site institucional One Page, totalmente responsivo e com design agradável com os seguintes requisitos:
+- Menu com logo, nomes das seções e mídias sociais.
+- Banner principal FullWidth ou FullScreen
+- Seção Call to Action
+- Seção com imagem a esquerda e texto a direita, alinhados verticalmente ao centro.
+- Seção de galeria.
+- Seção de notícias.
+- Seção de contato com formulário e background
+- Footer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Diferenciais realizados no projeto:
 
-## Deploy on Vercel
+- Formulário inserido no banner.
+- Galeria de imagens funcional.
+- Accordion na seção de contato.
+- Navegação do menu com função goToSection implementada.
+- Meta tags para SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 📈 Status do Projeto
+![Frame 16](https://user-images.githubusercontent.com/108281436/192803852-d0a0e110-a351-4eb9-ad0e-95cb36a0bb49.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# 🛠️ Funcionalidades e Demonstração da Aplicação
+
+<p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238551-94b97716-5203-4f7d-b325-0888c50512de.png"/>
+</p>
+
+<p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238568-d25d74b2-a4ac-43db-bf14-3f81814fcc3c.png"/>
+</p>
+
+ <p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238590-bb4869f8-0c8d-4490-9760-d1a665ef0881.png"/>
+</p>
+    
+<p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238622-cfa4a11f-4669-4696-aea2-c031059dd2d1.png"/>
+</p>
+ 
+ <p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238635-43a0f4f0-d66c-4150-a442-028aa05776db.png"/>
+</p>
+    
+    <p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238653-442fc817-2d8c-4bf8-af74-7275dc9c2221.png"/>
+</p>
+<p align='center'>
+  <img src="https://user-images.githubusercontent.com/108281436/218238675-cc922978-6258-4abe-9e6a-b8acdc55c8a6.png"/>
+</p>
+
+
+# 🔑 Acesso ao Projeto
+
+[![Acesso](https://user-images.githubusercontent.com/108281436/192802838-0c7abeda-f41a-4c34-86c7-ead30e2b223c.png)](https://gusto-buffet.vercel.app/) <br>
+ou acesse direto pelo link https://gusto-buffet.vercel.app/
+
+# 👨🏻‍💻 Tecnologias utilizadas
+<div align='start'>
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"  />
+
+<img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205324695-eef946cd-1fe6-4c7f-8404-b181fec6fda0.png"  />
+
+<img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205325896-cc8dd048-ebb4-4455-99ed-af81caf81410.png" />
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" />
+
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
+
+</div>
