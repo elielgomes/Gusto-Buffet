@@ -87,7 +87,7 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
 
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"  />
 
-<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"  />
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"  />
 
 <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205325896-cc8dd048-ebb4-4455-99ed-af81caf81410.png" />
 
