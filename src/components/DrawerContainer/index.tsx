@@ -15,29 +15,27 @@ interface IProps {
 	navRefs: IRefSections;
 }
 
-export const DrawerContainer: React.FC<IProps> = ({ isOpen, onClose, navRefs }) => {
-
-	return (
-		<Drawer
-			placement="right"
-			isOpen={isOpen}
-			onClose={onClose}
+export const DrawerContainer: React.FC<IProps> = ({ isOpen, onClose, navRefs }) => (
+	<Drawer
+		placement="right"
+		isOpen={isOpen}
+		onClose={onClose}
+	>
+		<DrawerOverlay />
+		<DrawerContent
+			background="primary.500"
+			alignItems="center"
 		>
-			<DrawerOverlay />
-			<DrawerContent
-				background="primary.500"
-				alignItems="center"
-			>
-				<DrawerCloseButton
-					color="tertiary.50"
-					_active={{
-						outlineColor: "tertiary.50"
-					}}
-				/>
-				<DrawerBody pt={20} textAlign="center">
-					<DrawerLinks onClose={onClose} navRefs={navRefs} />
-				</DrawerBody>
-			</DrawerContent>
-		</Drawer>
-	);
-};
+			<DrawerCloseButton
+				color="tertiary.50"
+				_active={{
+					outlineColor: "tertiary.50",
+				}}
+			/>
+			<DrawerBody pt={20} textAlign="center">
+				<DrawerLinks navRefs={navRefs} />
+			</DrawerBody>
+		</DrawerContent>
+	</Drawer>
+);
+

@@ -15,6 +15,12 @@ const strings = new LocalizedStrings({
 				phone: "Telefone",
 				email: "E-mail",
 				message: "Mensagem",
+				placeholders: {
+					name: "Seu nome...",
+					phone: "(00) 00000-0000",
+					email: "seuemail@email.com",
+					message: "Digite sua dúvida ou sugestão..."
+				}
 			},
 			mainBanner: {
 				title: "Elegância e Sofisticação",
@@ -37,8 +43,8 @@ const strings = new LocalizedStrings({
 					subTitle: "Anos de Experiência",
 				},
 				{
-					title: "4800",
-					subTitle: "Horas de Cozinha"
+					title: "273",
+					subTitle: "Variedades de Pratos"
 				},
 				{
 					title: "6300",
@@ -92,7 +98,7 @@ const strings = new LocalizedStrings({
 					title: "E-mail",
 					value: "contato@gusto.com"
 				},
-        copyright: "©2023 - Todos os direitos reservados - Desenvolvido por Eliel Gomes"
+				copyright: "©2023 - Todos os direitos reservados - Desenvolvido por Eliel Gomes"
 			}
 		},
 		actions: {

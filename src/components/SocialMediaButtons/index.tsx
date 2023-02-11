@@ -1,7 +1,15 @@
 import React from "react";
-import { Flex, Link, Box, FlexProps } from "@chakra-ui/react";
-import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa"
-
+import {
+	Flex,
+	Link,
+	Box,
+	FlexProps
+} from "@chakra-ui/react";
+import {
+	FaFacebook,
+	FaInstagram,
+	FaLinkedinIn
+} from "react-icons/fa"
 
 interface IProps {
 	flexProps?: FlexProps;
@@ -12,15 +20,15 @@ export const SocialMediaButtons: React.FC<IProps> = ({ flexProps }) => {
 	const socialMediaButtons = [
 		{
 			icon: FaFacebook,
-			href: "https://www.facebook.com/"
+			href: "https://www.facebook.com/",
 		},
 		{
 			icon: FaInstagram,
-			href: "https://www.instagram.com/"
+			href: "https://www.instagram.com/",
 		},
 		{
 			icon: FaLinkedinIn,
-			href: "https://www.linkedin.com/"
+			href: "https://www.linkedin.com/",
 		}
 	];
 
@@ -32,7 +40,7 @@ export const SocialMediaButtons: React.FC<IProps> = ({ flexProps }) => {
 			{...flexProps}
 		>
 			{socialMediaButtons.map((item) => (
-				<Link key={item.href} href={item.href}>
+				<Link key={item.href} href={item.href} target="_blank">
 					<Box
 						as={item.icon}
 						color="primary.400"
@@ -40,11 +48,10 @@ export const SocialMediaButtons: React.FC<IProps> = ({ flexProps }) => {
 						transition="all 0.2s"
 						_hover={{
 							transform: "scale(1.1)",
-							color: "primary.300"
+							color: "primary.300",
 						}}
 					/>
-				</Link>
-			))}
+				</Link>))}
 		</Flex>
 	)
-}
+};

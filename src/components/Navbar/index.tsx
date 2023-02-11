@@ -8,11 +8,11 @@ import {
 	Link,
 	Button
 } from "@chakra-ui/react";
-import { GiHamburgerMenu } from "react-icons/gi"
+import { GiHamburgerMenu } from 'react-icons/gi'
 import Image from "next/image";
 import { SocialMediaButtons } from "../SocialMediaButtons";
 import { DrawerContainer } from "@/components";
-import { Rubik } from "@next/font/google";
+import { rubik } from "@/theme/fonts";
 import strings from "@/resources/strings";
 
 export interface INavLinks {
@@ -32,14 +32,7 @@ export interface IProps {
 	navRefs: IRefSections;
 }
 
-const navStrings = strings.components.navbar
-
-const rubik = Rubik({
-	weight: '400',
-	subsets: ['latin'],
-	style: "normal",
-})
-
+const navStrings = strings.components.navbar;
 
 export const Navbar: React.FC<IProps> = ({ navRefs }) => {
 
@@ -47,30 +40,30 @@ export const Navbar: React.FC<IProps> = ({ navRefs }) => {
 
 	const onGoSection = (section: React.RefObject<HTMLElement>) => {
 		section.current?.scrollIntoView();
-	}
+	};
 
 	const Navlinks: INavLinks[] = [
 		{
 			text: navStrings.home,
-			scroll: navRefs.mainRef
+			scroll: navRefs.mainRef,
 		},
 		{
 			text: navStrings.about,
-			scroll: navRefs.aboutRef
+			scroll: navRefs.aboutRef,
 		},
 		{
 			text: navStrings.galery,
-			scroll: navRefs.galeryRef
+			scroll: navRefs.galeryRef,
 		},
 		{
 			text: navStrings.team,
-			scroll: navRefs.teamRef
+			scroll: navRefs.teamRef,
 		},
 		{
 			text: navStrings.contact,
-			scroll: navRefs.contactRef
-		}
-	]
+			scroll: navRefs.contactRef,
+		},
+	];
 
 	return (
 		<Box
@@ -115,7 +108,7 @@ export const Navbar: React.FC<IProps> = ({ navRefs }) => {
 								fontSize="xs"
 								style={{
 									fontFamily: rubik.style.fontFamily,
-									textDecoration: "none"
+									textDecoration: "none",
 								}}
 							>
 								<ListItem
@@ -127,7 +120,7 @@ export const Navbar: React.FC<IProps> = ({ navRefs }) => {
 									transition="all 0.2s"
 									_hover={{
 										color: "primary.300",
-										borderBottomColor: "tertiary.50"
+										borderBottomColor: "tertiary.50",
 									}}
 								>
 									{item.text}
@@ -156,4 +149,4 @@ export const Navbar: React.FC<IProps> = ({ navRefs }) => {
 			/>
 		</Box>
 	)
-}
+};

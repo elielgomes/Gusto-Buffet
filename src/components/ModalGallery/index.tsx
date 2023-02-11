@@ -1,12 +1,7 @@
 import React from "react";
 import { Box, Image } from "@chakra-ui/react";
-import {
-	CiCircleChevLeft,
-	CiCircleChevRight,
-} from "react-icons/ci"
-import { AiOutlineCloseCircle } from "react-icons/ai"
-import { ContainerSection } from "../ContainerSection";
-
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import { IGalleryImage } from "../Sections/Gallery";
 
 interface IProps {
@@ -39,13 +34,22 @@ export const ModalGallery: React.FC<IProps> = (props) => {
 					left="0px"
 					right="0px"
 					zIndex="999"
-					bgColor="#000"
+					bgColor="primary.900"
 					display="flex"
 					alignItems="center"
 					justifyContent="center"
-					width="100%"
-					height="100%"
+					width="100vw"
+					height="100vh"
 				>
+
+					<Box
+						width="calc(100vw - 30%)"
+						height="calc(100vh - 30%)"
+						display="flex"
+						alignItems="center"
+						justifyContent="center"
+						position="relative"
+					>
 						<Box
 							as={AiOutlineCloseCircle}
 							size="30px"
@@ -56,57 +60,50 @@ export const ModalGallery: React.FC<IProps> = (props) => {
 							cursor="pointer"
 							opacity="0.6"
 							color="tertiary.50"
-							zIndex="9999"
+							zIndex={999}
 							_hover={{
-								opacity: "1"
+								opacity: "1",
 							}}
 						/>
 						<Box
 							as={CiCircleChevLeft}
 							size="30px"
-							left="40px"
+							left="-50px"
 							onClick={prevSlide}
-							position="fixed"
+							position="absolute"
 							cursor="pointer"
 							opacity="0.6"
-							color="#fff"
-							zIndex="9999"
+							color="tertiary.50"
+							zIndex={999}
 							_hover={{
-								opacity: "1"
+								opacity: "1",
 							}}
 						/>
 						<Box
 							as={CiCircleChevRight}
 							size="30px"
-							right="40px"
+							right="-50px"
 							onClick={nextSlide}
-							position="fixed"
+							position="absolute"
 							cursor="pointer"
 							opacity="0.6"
-							color="#fff"
-							zIndex="9999"
+							color="tertiary.50"
+							zIndex={999}
 							_hover={{
-								opacity: "1"
+								opacity: "1",
 							}}
 						/>
-						<Box
-							width="calc(100% - 40px)"
-							height="calc(100% - 40px)"
-							display="flex"
-							alignItems="center"
-							justifyContent="center"
-						>
-							<Image
-								src={galleryImages[slideNumber].src}
-								alt=''
-								maxWidth="100%"
-								maxHeight="100%"
-								pointerEvents="none"
-								userSelect="none"
-							/>
-						</Box>
+						<Image
+							src={galleryImages[slideNumber].src}
+							alt={galleryImages[slideNumber].alt}
+							width="800px"
+							height="auto"
+							pointerEvents="none"
+							userSelect="none"
+						/>
+					</Box>
 				</Box>
 			}
 		</>
 	)
-}
+};

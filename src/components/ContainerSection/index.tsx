@@ -6,13 +6,11 @@ interface IContainer {
 	containerProps?: ContainerProps;
 }
 
-export const ContainerSection: React.FC<IContainer> = ({ children, containerProps }) => {
-	return (
-		<Container
-			maxWidth="1500px"
-			{...containerProps}
-		>
-			{children}
-		</Container>
-	)
-}
+export const ContainerSection: React.FC<IContainer> = ({ children, containerProps }) => (
+	<Container
+		maxWidth="1500px"
+		{...containerProps}
+	>
+		{children}
+	</Container>
+);

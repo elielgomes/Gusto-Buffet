@@ -1,24 +1,16 @@
 import React from "react";
-
-import { Box, Grid, GridItem, Heading } from "@chakra-ui/react";
+import {
+	Box,
+	Grid,
+	GridItem,
+	Heading,
+} from "@chakra-ui/react";
 import { ContainerSection } from "@/components/ContainerSection";
 import strings from "@/resources/strings";
-import { Italianno, Rubik } from "@next/font/google";
-import 'aos/dist/aos.css';
+import { rubik, italianno } from "@/theme/fonts";
+import "aos/dist/aos.css";
 
 const sectionStrings = strings.sections.reference;
-
-const italianno = Italianno({
-	subsets: ["latin"],
-	weight: "400",
-	style: "normal"
-})
-
-const rubik = Rubik({
-	subsets: ["latin"],
-	weight: "400",
-	style: "normal"
-})
 
 export const Reference: React.FC = () => {
 	return (
@@ -63,7 +55,7 @@ export const Reference: React.FC = () => {
 									as="h4"
 									fontSize={{ sm: "30px", lg: "60px" }}
 									style={{
-										fontFamily: italianno.style.fontFamily
+										fontFamily: italianno.style.fontFamily,
 									}}
 								>
 									{item.title}
@@ -74,14 +66,13 @@ export const Reference: React.FC = () => {
 									fontSize={{ sm: "16px", lg: "20px" }}
 									textAlign="center"
 									style={{
-										fontFamily: rubik.style.fontFamily
+										fontFamily: rubik.style.fontFamily,
 									}}
 								>
 									{item.subTitle}
 								</Heading>
 							</GridItem>
-						</Box>
-					))}
+						</Box>))}
 				</Grid>
 			</ContainerSection>
 		</Box>

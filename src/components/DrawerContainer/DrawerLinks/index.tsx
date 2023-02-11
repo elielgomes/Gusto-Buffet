@@ -1,26 +1,17 @@
 import React from "react";
 import { Text, Box, Link } from "@chakra-ui/react";
-import { Rubik } from "@next/font/google";
 import { SocialMediaButtons } from "@/components";
 import { INavLinks, IRefSections } from "@/components/Navbar";
 import strings from "@/resources/strings";
+import { rubik } from "@/theme/fonts";
 
 interface IProps {
-	onClose: () => void;
 	navRefs: IRefSections;
 }
 
-const drawerStrings = strings.components.navbar
+const drawerStrings = strings.components.navbar;
 
-const rubik = Rubik({
-	weight: '400',
-	subsets: ['latin'],
-	style: "normal",
-})
-
-export const DrawerLinks: React.FC<IProps> = ({ onClose, navRefs }) => {
-
-	const fontSizeBreakPoint = { base: "sm", lg: "md" };
+export const DrawerLinks: React.FC<IProps> = ({ navRefs }) => {
 
 	const onGoSection = (section: React.RefObject<HTMLElement>) => {
 		section.current?.scrollIntoView();
@@ -29,26 +20,25 @@ export const DrawerLinks: React.FC<IProps> = ({ onClose, navRefs }) => {
 	const DrawerLinks: INavLinks[] = [
 		{
 			text: drawerStrings.home,
-			scroll: navRefs.mainRef
+			scroll: navRefs.mainRef,
 		},
 		{
 			text: drawerStrings.about,
-			scroll: navRefs.aboutRef
+			scroll: navRefs.aboutRef,
 		},
 		{
 			text: drawerStrings.galery,
-			scroll: navRefs.galeryRef
+			scroll: navRefs.galeryRef,
 		},
 		{
 			text: drawerStrings.team,
-			scroll: navRefs.teamRef
+			scroll: navRefs.teamRef,
 		},
 		{
 			text: drawerStrings.contact,
-			scroll: navRefs.contactRef
+			scroll: navRefs.contactRef,
 		}
-	]
-
+	];
 
 	return (
 		<>
@@ -73,12 +63,12 @@ export const DrawerLinks: React.FC<IProps> = ({ onClose, navRefs }) => {
 						mb={4}
 					>
 						<Text
-							fontSize={fontSizeBreakPoint}
+							fontSize={{ base: "sm", lg: "md" }}
 							color="primary.300"
 							textTransform="uppercase"
 							fontWeight="light"
 							style={{
-								fontFamily: rubik.style.fontFamily
+								fontFamily: rubik.style.fontFamily,
 							}}
 						>
 							{item.text}

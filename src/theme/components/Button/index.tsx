@@ -24,7 +24,7 @@ export const Button: ComponentStyleConfig = {
 			_active: {
 				bgColor: "tertiary.50",
 				textColor: "secondary.50"
-			}
+			},
 		},
 		outline: {
 			textColor: "tertiary.50",
@@ -39,12 +39,12 @@ export const Button: ComponentStyleConfig = {
 			_hover: {
 				bgColor: "tertiary.50",
 				textColor: "secondary.50"
-			}
+			},
 		},
 		default: {
 			bgColor: "transparent",
 			outline: "none",
 			border: "none",
-		}
-	}
+		},
+	},
 };
