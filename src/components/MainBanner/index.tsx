@@ -11,7 +11,12 @@ const componentStrings = strings.components.mainBanner;
 export const MainBanner: React.FC = () => (
 	<Box
 		width="100vw"
-		height="100vh"
+		height={{
+			base: "100vh",
+			sm: "130vh",
+			md: "110vh",
+			lg: "100vh",
+		}}
 		backgroundImage="url('assets/main-banner.jpg')"
 		backgroundSize="cover"
 		backgroundRepeat="no-repeat"
@@ -33,14 +38,20 @@ export const MainBanner: React.FC = () => (
 					flexDirection="column"
 					justifyContent="center"
 					alignItems="center"
-					pt={{ md: "70px", lg: "90px" }}
+					pt={{ md: "70px" }}
 				>
 					<Heading
 						as="h1"
-						fontSize={{ base: "30px", sm: "40px", md: "60px", lg: "90px", xl: "70px", "2xl": "90px" }}
+						fontSize={{
+							base: "30px",
+							sm: "40px",
+							md: "60px",
+							lg: "90px",
+						}}
 						color="secondary.50"
 						fontWeight="light"
-						py={{ base: "10px", sm: "20px", md: "30px", lg: "30px" }}
+						mt={{ base: "0px", sm: "90px", lg: "20px" }}
+						py={{ base: "10px", sm: "20px", md: "30px" }}
 						px={{ base: "5px", lg: "40px" }}
 						borderY="1px solid"
 						style={{

@@ -18,7 +18,7 @@ export const SimpleForm: React.FC = () => (
 		gap="10px"
 		bgColor="primary.500"
 		width={{ base: "280px", lg: "280px", xl: "300px" }}
-		height="430px"
+		height="390px"
 		padding="20px"
 		borderRadius="8px"
 	>
