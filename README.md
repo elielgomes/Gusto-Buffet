@@ -24,7 +24,7 @@
 
 - O projeto consiste em uma página de um Buffet fictício de comida italiana chamado Gusto, onde o cliente pode contratar o Buffet para realizar confraternizações e festas comemorativas, o projeto foi desenvolvido para se adequar aos requisítos solicitados e para ter um layout fluído e agradável.
 
--Principais objetivos:
+--Principais objetivos:
 
 Criar um site institucional One Page, totalmente responsivo e com design agradável com os seguintes requisitos:
 - Menu com logo, nomes das seções e mídias sociais.
@@ -36,7 +36,7 @@ Criar um site institucional One Page, totalmente responsivo e com design agradá
 - Seção de contato com formulário e background
 - Footer
 
-- Diferenciais realizados no projeto:
+-- Diferenciais realizados no projeto:
 
 - Formulário inserido no banner.
 - Galeria de imagens funcional.
@@ -69,7 +69,7 @@ Criar um site institucional One Page, totalmente responsivo e com design agradá
   <img src="https://user-images.githubusercontent.com/108281436/218238635-43a0f4f0-d66c-4150-a442-028aa05776db.png"/>
 </p>
     
-    <p align='center'>
+<p align='center'>
   <img src="https://user-images.githubusercontent.com/108281436/218238653-442fc817-2d8c-4bf8-af74-7275dc9c2221.png"/>
 </p>
 <p align='center'>
