@@ -90,6 +90,10 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"  />
 
 <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205325896-cc8dd048-ebb4-4455-99ed-af81caf81410.png" />
+  
+ <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/218239686-deded3a0-993b-49ee-b558-b97c40274ab5.png" />
+  
+<img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/218239728-1d98df7f-e833-4e6a-a2dd-cd1e00fff67b.png" />
 
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
 
@@ -100,7 +104,8 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
 
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" />
-
+  
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
+
 
 </div>
