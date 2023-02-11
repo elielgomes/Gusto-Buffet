@@ -87,7 +87,7 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
 
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"  />
 
-<img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205324695-eef946cd-1fe6-4c7f-8404-b181fec6fda0.png"  />
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"  />
 
 <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205325896-cc8dd048-ebb4-4455-99ed-af81caf81410.png" />
 
@@ -101,6 +101,6 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
 
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" />
 
-<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" />
+<img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
 
 </div>
