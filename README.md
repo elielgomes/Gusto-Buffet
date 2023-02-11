@@ -92,6 +92,7 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
 <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/205325896-cc8dd048-ebb4-4455-99ed-af81caf81410.png" />
   
  <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/218239772-94cc117f-029d-4a01-98f8-c335e1506e8b.png" />
+  <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/218239808-cbd23385-4284-4260-a059-54dc2fce021f.png" />
   
 <img width=60 heigth=60 src="https://user-images.githubusercontent.com/108281436/218239728-1d98df7f-e833-4e6a-a2dd-cd1e00fff67b.png" />
 
@@ -107,8 +108,4 @@ ou acesse direto pelo link https://gusto-buffet.vercel.app/
   
 <img width=60 heigth=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
   
-  ![image](https://user-images.githubusercontent.com/108281436/218239772-94cc117f-029d-4a01-98f8-c335e1506e8b.png)
-
-
-
 </div>
